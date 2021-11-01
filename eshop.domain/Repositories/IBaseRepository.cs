@@ -1,6 +1,6 @@
 ﻿namespace eshop.domain.Repositories
 {
-    public interface IRepository<TEntity, TKey> where TEntity : class
+    public interface IBaseRepository<TEntity, TKey> where TEntity : class
     {
         Task<TKey> InsertAsync(TEntity entity);
         Task<TEntity> GetAsync(TKey key);

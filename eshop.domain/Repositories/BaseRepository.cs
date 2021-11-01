@@ -4,11 +4,11 @@ using Serilog;
 
 namespace eshop.domain.Repositories
 {
-    public class Repository<TEntity, TKey> : IRepository<TEntity, TKey> where TEntity : class, IEntity<TKey>
+    public class BaseRepository<TEntity, TKey> : IBaseRepository<TEntity, TKey> where TEntity : class, IEntity<TKey>
     {
         private readonly EShopDbContext _context;
 
-        public Repository(EShopDbContext context)
+        public BaseRepository(EShopDbContext context)
         {
             _context = context;
         }
